@@ -15,4 +15,29 @@ spec:
       workingDir:
     
   initContainers:
+    - 
+      args:
+      command:
+      env:
+      image:
+      name:
+      ports:
+      volumeMounts:
+      workingDir:    
   volumes:
+    - 
+      configMap:
+      name:
+    -
+      emptyDir:
+      name:
+    -
+      name:
+      persistentVolumeClaim:
+    -
+      name:
+      secret:
+
+      
+      
+    
