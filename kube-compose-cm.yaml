@@ -37,7 +37,7 @@ spec:
           -
             key: index.php
             mode: 0400
-            path: /src/index.php
+            path: index.php
         name: phpinfo-cm
       name: phpinfo-volume
 
