@@ -14,35 +14,32 @@ spec:
         - php
       env:
         -
-          name:
-          value:
+          name: JAVA_HOME
+          value: /var/lib/java
       image: php:apache
       name: phpinfo-container
       ports: 
         -
-          containerPort:
-          name:
-          protocol:     
+          containerPort: 8080
+          protocol: TCP
       volumeMounts:
         -
-          mountPath:
-          name:
-          readOnly:
-          subPath:        
+          mountPath: /src/index.php
+          name: phpinfo-volume
+          readOnly: true
+          subPath: index.php
       workingDir: /src/
   volumes:
     - 
       configMap:
-      name:
-    -
-      emptyDir:
-      name:
-    -
-      name:
-      persistentVolumeClaim:
-    -
-      name:
-      secret:
+        defaultMode: 0400
+        items:
+          -
+            key: index.php
+            mode: 0400
+            path: /src/index.php
+        name: phpinfo-cm
+      name: phpinfo-volume
 
       
       
