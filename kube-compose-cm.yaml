@@ -42,6 +42,7 @@ spec:
       name: phpinfo-volume
 ---
 apiVersion: v1
+data:
   index.php: <?php phpinfo();?>
 immutable: true
 kind: ConfigMap
