@@ -42,8 +42,6 @@ spec:
       name: phpinfo-volume
 ---
 apiVersion: v1
-data: 
-  JAVA_HOME: /var/lib/java
   index.php: <?php phpinfo();?>
 immutable: true
 kind: ConfigMap
